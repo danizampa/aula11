@@ -5,7 +5,7 @@ function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
   trex_collided = loadImage("trex_collided.png");
   
-  groundImage = loadImage("ground2.png")
+  groundImage = loadImage("ground2.png");
 }
 
 function setup() {
@@ -31,9 +31,9 @@ function setup() {
 
 function draw() {
   //definir cor de fundo
-  background(220);
+  background(255);
   
-  console.log(trex.y)
+  console.log(trex.y);
   
   //pular quando a barra de espaço é pressionada
   if(keyDown("space") && trex.y >= 100) {
@@ -41,8 +41,9 @@ function draw() {
   }
   
   //acrescentar gravidade
-  trex.velocityY = trex.velocityY + 0.8
+  trex.velocityY = trex.velocityY + 0.8;
   
+  //fazer o chão reiniciar
   if (ground.x < 0){
     ground.x = ground.width/2;
   }
